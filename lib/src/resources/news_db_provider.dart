@@ -36,7 +36,7 @@ class NewsDbProvider {
     );
   }
 
-  fetchItem(int id) async {
+  Future<ItemModel?> fetchItem(int id) async {
     final maps = await db!.query(
       "Items",
       columns: null,
